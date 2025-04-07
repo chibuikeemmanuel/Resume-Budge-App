@@ -10,4 +10,5 @@
     <h1 align="center">Resume-Budge-App</h1>
   </a>
 </p>
+<p align="center">
 <a href="https://github.com/chibuikeemmanuel"><img title="Author" src="https://img.shields.io/badge/EMMANUEL-black?style=for-the-badge&logo=Github"></a> <a href="https://metrosportfolio.netlify.app/"><img title="Author" src="https://img.shields.io/badge/PORTFOLIO-black?style=for-the-badge&logo=whatsapp"></a> <a href="https://wa.me/+2348117206210"><img title="Author" src="https://img.shields.io/badge/CHAT US-black?style=for-the-badge&logo=whatsapp"></a>
