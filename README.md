@@ -24,12 +24,16 @@ cd resume-budgeter-app
 
 # Install client dependencies
 cd client
+
 npm install
+
 npm start
 
 # Install server dependencies
 cd ../server
+
 npm install
+
 npm run dev
 
 > Note: Add your .env file with API keys, database URIs, and secrets.
@@ -37,21 +41,29 @@ npm run dev
 # Usage
 
 1. Register or log in with Google/email
+
 2. Choose to build your resume or manage your budget
+
 3. Fill in the forms and customize your data
+
 4. Download your resume or analyze your budget trends
+
 5. Log out and come back anytime — your data is saved securely
 
 # Demo
 
 Live App (Vercel/Netlify link)
+
 Demo Video (2-3 min)
 
 # Developer
 
 Built with passion by:
+
 # Osy-Agbata Chibuike
+
 # GitHub :https://github.com/chibuikeemmanuel/
+
 # LinkedIn :https://www.linkedin.com/in/chibuike-osy-agbata-582250320/
 
 ## License
