@@ -17,7 +17,9 @@
 Installation
 
 # Clone the repo
+
 git clone https://github.com/your-username/resume-budgeter-app.git
+
 cd resume-budgeter-app
 
 # Install client dependencies
