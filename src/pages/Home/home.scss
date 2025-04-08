@@ -1,0 +1,88 @@
+div.home {
+  position: relative;
+  display: flex;
+  place-items: center;
+
+  div.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+      linear-gradient(to right, transparent 70%, var(--background-color)),
+      linear-gradient(180deg, transparent 80%, var(--background-color)),
+      var(--home-background-image-url);
+
+    opacity: 0.7;
+
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  div.wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    place-items: center;
+  }
+
+  h1,
+  h2 {
+    margin: 0 15px 15px 0;
+    user-select: none;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+    opacity: var(--home-image-opacity);
+  }
+
+  div.logo {
+    width: 50%;
+    margin-left: -1%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // 🎯 ADD THIS SECTION for button spacing
+  div.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 660px) {
+    div.wrapper {
+      flex-direction: column;
+      height: 80%;
+      justify-content: center;
+      gap: 5em;
+    }
+
+    div.logo {
+      margin: 5% auto;
+    }
+
+    img {
+      width: 70%;
+    }
+
+    div.button-group {
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      margin: 5% auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+}

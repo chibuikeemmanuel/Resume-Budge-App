@@ -1,0 +1,212 @@
+div.me {
+  position: relative;
+  display: flex;
+  width: 100%;
+  place-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(at bottom left, var(--background-color) 25%, transparent),
+      radial-gradient(at top right, var(--background-color) 15%, transparent),
+      var(--build-background-image-url);
+
+    z-index: -1;
+    opacity: 0.6;
+
+    background-size: contain;
+  }
+  
+  div.container {
+    width: 70%;
+    height: 80%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    @media (max-width: 580px) {
+      width: 90%;
+    }
+  }
+
+  div.header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.subheader {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  div.main {
+    margin-top: 2%;
+    flex-grow: 1;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    overflow: scroll;
+
+    div.resumes {
+
+      display: grid;
+      gap: 2em;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+
+      div.resumeCard {
+        padding: 24px;
+        height: 176px;
+        background-color: var(--resume-card-background);
+        border: 1px solid var(--resume-card-border);
+        border-radius: 10px;
+        box-shadow: var(--resume-card-shadow);
+        box-sizing: border-box;
+        cursor: pointer;
+
+        // display: flex;
+
+        transition: all 0.25s;
+
+        &:hover {
+          border: 1px solid var(--resume-card-border-hover);
+        }
+
+        div.content {
+          display: flex;
+          height: 100%;
+          gap: 1em;
+
+          div.details {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: 500;
+
+            & > div:last-child span {
+              width: fit-content;
+              padding: 4spx;
+              border-radius: 2px;
+              &:hover {
+                color: white;
+                background-color: var(--menu-hover-bg);
+              }
+            }
+
+            &-header {
+              display: flex;
+              gap: 1em;
+            }
+  
+            span {
+              color: var(--text-secondary);
+              display: block;
+            }
+
+            a.link {
+              text-decoration: none;
+              color: var(--text-link);
+              font-weight: 600;
+              font-size: 14px;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        div.actions {
+
+          div.more {
+            position: absolute;
+
+            box-shadow: var(--resume-card-shadow);
+            background-color: var(--resume-card-background);
+            border: 1px solid var(--resume-card-border);
+            border-radius: 12px;
+            
+            padding: 8px;
+            font-size: 14px;
+
+            z-index: 1000;
+            user-select: none;
+
+            span {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 8px;
+              border-radius: 8px;
+              gap: 2em;
+
+              &:hover {
+                background-color: var(--menu-hover-bg);
+              }
+            }
+          }
+
+          & > span {
+            color: var(--text-secondary);
+            display: block;
+            font-size: 1.2rem;
+            padding: 4px;
+            border-radius: 3px;
+
+            text-align: end;
+
+            &:hover {
+              background-color: var(--hover-bg);
+              color: var(--hover-accent);
+            }
+
+            transition: all 0.25s;
+          }
+
+          span.danger {
+            bottom: 0;
+            color: adjust-color($color: #d93036, $alpha: 0.5);
+            &:hover {
+              color: #d93036;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h1,
+  h2 {
+    margin: 0 15px 0 0;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+
+  img {
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+    display: inline;
+
+    @media (max-width: 1000px) {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 600px) {
+      flex-grow: 3;
+    }
+  }
+}

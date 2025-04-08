@@ -1,0 +1,237 @@
+html {
+  font-size: 0.729vw;
+}
+
+div.a4 {
+  width: 21cm - 2 * .7in;
+  height: 29.7cm - 2 * .75in;
+
+  padding: 0.7in;
+
+  background-color: white;
+
+  box-shadow: 0 5px 10px rgba(#000, 0.2);
+
+  transform-origin: left top;
+}
+
+.build {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  div.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .build-container {
+    display: flex;
+    height: 100%;
+
+    &.collapsed {
+
+      div.form {
+        display: block;
+      }
+  
+      div.resume-holder {
+        padding: 0;
+        height: 0;
+    
+        div.resume-preview, div.buttons {
+          opacity: 0;
+        }
+    
+        div.collapse {
+          bottom: 10px;
+    
+          i.fa-eye {
+            display: block;
+          }
+    
+          i.fa-eye-slash {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  overflow-x: hidden;
+
+  div.resume-holder {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--resume-holder-background);
+    box-shadow: inset 0 0 20px var(--resume-holder-shadow);
+
+    transition: all .5s;
+
+    div.resume-preview {
+      overflow: hidden;
+
+      * {
+        color: black;
+      }
+    }
+  }
+
+  div#collapse {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--text-primary);
+    z-index: 100;
+
+    border-radius: 2px;
+
+    &:hover {
+      background-color: var(--menu-hover-bg);
+    }
+
+    span {
+      margin-right: 3px;
+      font-weight: 600;
+    }
+  }
+
+  div.form {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(at bottom left, var(--background-color) 25%, transparent),
+        radial-gradient(at top right, var(--background-color) 15%, transparent),
+        var(--build-background-image-url);
+
+      z-index: -1;
+      opacity: 0.6;
+
+      background-size: contain;
+    }
+
+    div.container {
+      position: relative;
+      min-width: 50%;
+      max-width: 70%;
+      height: 80%;
+
+      display: flex;
+      flex-direction: column;
+
+      div.form-holder {
+        flex-grow: 1;
+      }
+    }
+
+    div.roadmap {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1000px) {
+  #collapse {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 10px;
+  }
+
+  * h2 {
+    font-size: 20px;
+  }
+
+  .build-container {
+    align-items: center;
+    flex-direction: column;
+
+    &.collapsed {
+      div.form {
+        display: none;
+      }
+    }
+
+    div.form {
+      width: fit-content;
+      order: 2;
+    }
+
+    div.resume-holder {
+      width: 100%;
+      padding: 20px 0;
+    }
+  }
+
+  .build {
+    div.form {
+      height: unset;
+
+      div.container {
+        max-width: 90%;
+        // min-height: 500px;
+        margin: 10% 0;
+      }
+    }
+  }
+
+  .roadmap {
+    margin-bottom: 10%;
+  }
+}
+
+// @media (max-width: 680px) {
+//   .build {
+//     div.resume-holder {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       z-index: 1000;
+//       padding: 0;
+//     }
+
+//     div.form {
+//       div.container {
+//         align-items: center;
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 650px) {
+  .build div.form div.container {
+    margin-top: 20%;
+  }
+}

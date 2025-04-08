@@ -1,75 +1,40 @@
-<h1 align="center"> Resume-Budge-App </h1>
-<p align="center">  
-  
-***
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=FF8F35&center=true&width=910&height=100&lines=THANKS FOR CHOOSING ;Resume-Budget-App;CREATED+BY+CHIBUIKE+OSY-AGBATA;RELEASED+07.04.25" alt="Typing SVG" /></a>
-  </p>
-   <p align="center">  
-     <a href="https://metrosportfolio.netlify.app/">
-       <img alt="wasi" height="300" src="https://th.bing.com/th?id=OIF.O1kvsNrGOyd%2bZb0xgimrhQ&w=202&h=121&c=7&r=0&o=5&dpr=1.5&pid=1.7">
-    <h1 align="center">Resume-Budge-App</h1>
-  </a>
-</p>
+<h1 align="center">
+  <img center src="imgs/logo.png">
+</h1>
+
+<h3 align="center">Resume builder & sharing platform</h3>
+
+<h4 align="center"><a href="https://leresume.vercel.app">leresume.vercel.app</a></h4>
+
+<br>
+
+## Description
+
+**LeResume** is powerful online platform designed to help users create professional resumes with ease.
+Users can customize their resumes, generate multiple versions tailored to different job applications, and share them effortlessly via a personalized link or downloadable PDF.
+
+##
+
+<br>
+
 <p align="center">
-<a href="https://github.com/chibuikeemmanuel"><img title="Author" src="https://img.shields.io/badge/EMMANUEL-black?style=for-the-badge&logo=Github"></a> <a href="https://metrosportfolio.netlify.app/"><img title="Author" src="https://img.shields.io/badge/PORTFOLIO-black?style=for-the-badge&logo=whatsapp"></a> <a href="https://wa.me/+2348117206210"><img title="Author" src="https://img.shields.io/badge/CHAT US-black?style=for-the-badge&logo=whatsapp"></a>
-  
-### 1. FORK THIS REPO
-Installation
+  <img center src="imgs/leresume.gif">
+</p>
 
-# Clone the repo
+### Features
 
-git clone https://github.com/your-username/resume-budgeter-app.git
+- Build a professtional single page resume
+- Add your coding projects directly from github
+- Share your resumes with others
+- See how many views your shared resumes got
+- Previewing the resume in real time
+- Can be used without an account (has some limitations)
+- Multiple templates available
 
-cd resume-budgeter-app
+<br>
 
-# Install client dependencies
-cd client
+## Templates
 
-npm install
-
-npm start
-
-# Install server dependencies
-cd ../server
-
-npm install
-
-npm run dev
-
-> Note: Add your .env file with API keys, database URIs, and secrets.
-
-# Usage
-
-1. Register or log in with Google/email
-
-2. Choose to build your resume or manage your budget
-
-3. Fill in the forms and customize your data
-
-4. Download your resume or analyze your budget trends
-
-5. Log out and come back anytime — your data is saved securely
-
-# Demo
-
-Live App (Vercel/Netlify link)
-
-Demo Video (2-3 min)
-
-# Developer
-
-Built with passion by:
-
-# Osy-Agbata Chibuike
-
-# GitHub :https://github.com/chibuikeemmanuel/
-
-# LinkedIn :https://www.linkedin.com/in/chibuike-osy-agbata-582250320/
-
-## License
-
-The  Resume-Budge-App is released under the [MIT License](https://opensource.org/licenses/MIT).
-
-Enjoy the diverse features of the Resume-Budge-App
-
-
+<p align="center">
+  <img src="imgs/templates.png"></img>
+</p>
